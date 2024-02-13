@@ -1,0 +1,123 @@
+ prog1
+print("Enter the 5 Subjects Mark Below!")
+tam=int(input("Enter Tamil Mark:"))
+sci=int(input("Enter Science Mark:"))
+soc=int(input("Enter Social Mark:"))
+eng=int(input("Enter English Mark:"))
+math=int(input("Enter Mathematics Mark:"))
+total= tam+sci+soc+eng+math
+percent= total/5
+print("---------------------------")
+print("---------------------------")
+print("Calculating your Total, Percentage & Grade.....")
+print("---------------------------")
+print("---------------------------")
+print("PSG COLLEGE OF ARTS SCIENECE")
+print("---------------------------")
+print("MARKLIST OF THE YEAR 2023")
+print("---------------------------")
+print("---------------------------")
+print("Subject                Mark")
+print("Tamil:           ",tam)
+print("Science:         ",sci)
+print("Social:          ",soc)
+print("English:         ",eng)
+print("Mathematics:     ",math)
+print("Total Mark of 5 Subjects is:",total)
+print("Overall Percentage of 5 Subjects:",percent)
+print("---------------------------")
+print("---------------------------")
+print("Calculating your overall Grade....")
+if percent >=80:
+    print("Your Grade is : Grade A")
+elif percent >=70 & percent < 80:
+    print("Your Grade is : Grade B")
+elif percent >=60 & percent < 70:
+    print("Your Grade is : Grade C")
+elif percent >=40 & percent < 60:
+    print("Your Grade is : Grade D")
+else:
+    print("Your Grade is : Grade E")
+print("---------------------------")
+print("---------------------------")
+print("Thank you! :)")
+
+prog 2
+print("To find The Area of Square press 1")
+print("To find The Area of rectangle press 2")
+print("To find The Area of triangle press 3")
+print("To find The Area of circle press 4")
+ch=int(input("Enter a Number:"))
+if ch==1:
+     a=int(input("enter the value of the side:"))
+     area=a*a
+     print("area of the square is :",area)
+elif ch==2:
+     l=int(input("Enter the length:"))
+     b=int(input("Enter the breadth:"))
+     area=l*b
+     print("the area of the rectangle is:",area)
+elif ch==3:
+     h=int(input("Enter the Height of the triangle:"))
+     br=int(input("Enter the base of the triangle:"))
+     area=0.5*br*h
+     print("Area of the triangle is:",area)
+elif ch==4:
+     r=int(input("Enter the radius of the circle:"))
+     area=3.14*r*r
+     print("Area of the circle is:",area)
+else:
+     print("incorrect number")
+
+print("Thank You!")  
+
+prg 3
+def findFactorial(n):
+    if(n == 1 or n == 0):
+        return 1
+    else:
+        return (n*findFactorial(n-1))
+
+n = int(input("Enter num:"))
+print(findFactorial(n))
+
+prg4
+list=[]
+n=int(input("Enter number of elements:"))
+for i in range(0,n):
+    a=int(input())
+    list.append(a)   
+print(" The List you've entered is :",list)    
+n=len(list)
+odd=0
+even=0
+for i in range(0,n):
+    if list[i]%2==0:
+        even +=1
+    else:
+        odd +=1
+print("Number of even Numbers is:",even)
+print("Number of odd Numbers is :",odd)
+
+prg5 
+def string_test(s):
+    d = {"UPPER_CASE" : 0, "LOWER_CASE" : 0}
+    for c in s:
+        if c.isupper():
+            d["UPPER_CASE"] += 1
+        elif c.islower():
+            d["LOWER_CASE"] += 1
+        else:
+            pass
+    print ("Original string :" , s)
+    print ("No. of uppercase characters: " , d["UPPER_CASE"])
+    print ("No. of lowercase characters: " , d["LOWER_CASE"])   
+sentence = input ("Enter sentence:- ")
+string_test(sentence)
+
+prg6
+string=input(("Enter a letter:"))  
+if(string==string[::-1]):  
+      print("The letter is a palindrome")  
+else:  
+      print("The letter is not a palindrome")  
